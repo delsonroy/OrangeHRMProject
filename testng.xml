@@ -1,0 +1,13 @@
+<suite name="Suite">
+	<test name="Test">
+		<parameter name="grid" value="no" />
+		<parameter name="gridURL" value="https://192.168.111.1" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="appURL" value="https://opensource-demo.orangehrmlive.com/" />
+		<parameter name="ITO" value="10" />
+		<parameter name="ETO" value="9" />
+		<packages>
+			<package name="script" />
+		</packages>
+	</test>
+</suite> 
