@@ -1,6 +1,6 @@
 <suite name="Suite">
 	<test name="Test">
-		<parameter name="grid" value="no" />
+		<parameter name="grid" value="yes" />
 		<parameter name="gridURL" value="https://192.168.111.1" />
 		<parameter name="browser" value="chrome" />
 		<parameter name="appURL" value="https://opensource-demo.orangehrmlive.com/" />

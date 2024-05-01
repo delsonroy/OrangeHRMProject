@@ -3,17 +3,17 @@ package script;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import generic.BaseTest;
 import generic.Excel;
 import generic.TestListener;
 import page.DashBoardPage;
 import page.LoginPage;
+import generic.Retry;
 
 
 public class ValidLogin extends BaseTest {
 
-	@Test(priority = 1)
+	@Test(priority = 1, retryAnalyzer = Retry.class)
 	public void testValidLogin() {
 		// Creat the POM class Object
 		String un=Excel.getData("./data/Book1.xlsx", "ValidLogin", 1, 0);
@@ -27,7 +27,7 @@ public class ValidLogin extends BaseTest {
 		// Enter valid username
 		page.setUsername(un);
 		// Enter valid password
-		page.setPassword(pw);
+		page.setPassword(" ");
 		// Enter click
 		page.clickLoginBtn();
 		// verify DashboardPage is Displayed

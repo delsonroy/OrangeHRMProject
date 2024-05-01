@@ -67,7 +67,7 @@ public class ScreenShots {
 		try {
 			Robot robot = new Robot();
 			Dimension desktopsize = Toolkit.getDefaultToolkit().getScreenSize();
-			System.out.println(desktopsize);
+			//System.out.println(desktopsize);
 			BufferedImage img = robot.createScreenCapture(new Rectangle(desktopsize));
 			ImageIO.write(img, "png", new File(path));
 

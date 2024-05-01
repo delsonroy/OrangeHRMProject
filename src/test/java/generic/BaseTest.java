@@ -8,6 +8,7 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Capabilities;
@@ -141,6 +142,13 @@ public class BaseTest {
 	@AfterMethod  ////.............After Method....................
 	public void postCondition(ITestResult result) throws Exception
 	{
+		List<String> output = Reporter.getOutput(result);
+		for (String msg : output) {
+			
+			extentTest.info(msg);
+		}
+		
+		
 		String name=result.getName();
 		System.out.println(name);
 		int status=result.getStatus();

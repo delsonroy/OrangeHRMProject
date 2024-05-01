@@ -2,16 +2,15 @@ package script;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import generic.BaseTest;
 import generic.Excel;
 import page.LoginPage;
+import generic.Retry;
 
 public class InvalidLogin extends BaseTest{
 	
 	
-	
-	@Test(priority = 2)
+	@Test(priority = 2, retryAnalyzer = Retry.class)
 	public void testInvalidLogin()
 	{
 		//Takda data from Excel

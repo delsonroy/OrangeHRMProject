@@ -18,15 +18,6 @@
           <include name="testValidLogin"/>
         </methods>
       </class> <!-- script.ValidLogin -->
-      <class name="script.InvalidLogin">
-        <methods>
-          <include name="postCondition"/>
-          <include name="testInvalidLogin"/>
-          <include name="generateReport"/>
-          <include name="intReport"/>
-          <include name="preCondition"/>
-        </methods>
-      </class> <!-- script.InvalidLogin -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
