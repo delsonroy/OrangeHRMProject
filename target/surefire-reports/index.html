@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,35 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,  1 skipped,  1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="script.ValidLogin" class="method navigator-link" hash-for-method="testValidLogin">testValidLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Retried methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Suite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="script.ValidLogin" class="method navigator-link" hash-for-method="testValidLogin">testValidLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -131,7 +103,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="script.InvalidLogin" class="method navigator-link" hash-for-method="testInvalidLogin">testInvalidLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="script.ValidLogin" class="method navigator-link" hash-for-method="testValidLogin">testValidLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -146,57 +118,17 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">script.ValidLogin</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testValidLogin">
-                  </a> <!-- testValidLogin -->
-                  <span class="method-name">testValidLogin</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at script.ValidLogin.testValidLogin(ValidLogin.java:37)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 35 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">script.ValidLogin</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testValidLogin">
-                  </a> <!-- testValidLogin -->
-                  <span class="method-name">testValidLogin</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at script.ValidLogin.testValidLogin(ValidLogin.java:37)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 35 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">script.InvalidLogin</span>
+              <span class="class-name">script.ValidLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testInvalidLogin">
-                  </a> <!-- testInvalidLogin -->
-                  <span class="method-name">testInvalidLogin</span>
+                  <a name="testValidLogin">
+                  </a> <!-- testValidLogin -->
+                  <span class="method-name">testValidLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -212,12 +144,11 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
-    &lt;parameter name=&quot;ETO&quot; value=&quot;9&quot;/&gt;
-    &lt;parameter name=&quot;ITO&quot; value=&quot;10&quot;/&gt;
-    &lt;parameter name=&quot;grid&quot; value=&quot;no&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;parameter name=&quot;gridURL&quot; value=&quot;https://192.168.111.1&quot;/&gt;
-    &lt;parameter name=&quot;appURL&quot; value=&quot;https://opensource-demo.orangehrmlive.com/&quot;/&gt;
+    &lt;parameter name=&quot;htmlpath&quot; value=&quot;report/Spark.html&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;${browser}&quot;/&gt;
+    &lt;parameter name=&quot;gridURL&quot; value=&quot;${gridURL}&quot;/&gt;
+    &lt;parameter name=&quot;appURL&quot; value=&quot;https://opensource-demo.orangehrmlive.com&quot;/&gt;
+    &lt;parameter name=&quot;pptfile&quot; value=&quot;prod.properties&quot;/&gt;
     &lt;packages&gt;
       &lt;package name=&quot;script&quot;/&gt;
     &lt;/packages&gt;
@@ -263,24 +194,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testValidLogin')
 data.setCell(0, 2, 'script.ValidLogin')
-data.setCell(0, 3, 20678);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testValidLogin')
-data.setCell(1, 2, 'script.ValidLogin')
-data.setCell(1, 3, 20655);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testInvalidLogin')
-data.setCell(2, 2, 'script.InvalidLogin')
-data.setCell(2, 3, 2250);
+data.setCell(0, 3, 1726);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 43 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -295,15 +218,22 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
+              <span class="ignored-class-name">script.InvalidLogin</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testInvalidLogin</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
               <span class="ignored-class-name">script.ValidLogin</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">intReport</span>
-                <br/>
                 <span class="ignored-method-name">generateReport</span>
+                <br/>
+                <span class="ignored-method-name">intReport</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -317,56 +247,30 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">script.InvalidLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">intReport</span>
+                <span class="method-name">intReport(report/Spark.html)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-              <div class="configuration-method before">
-                <span class="method-name">preCondition(no, https://192.168.111.1, chrome, https://opensource-demo.orangehrmlive.com/, 10, 9, public void sc...)</span>
-                <span class="method-start">230 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testInvalidLogin</span>
-                <span class="method-start">5069 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">postCondition([TestResult name=testInvalidLogin status=SUCCESS method=InvalidLogin.testInvalidLogin()[pri:2, insta...)</span>
-                <span class="method-start">7321 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">script.ValidLogin</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">preCondition(no, https://192.168.111.1, chrome, https://opensource-demo.orangehrmlive.com/, 10, 9, public void sc...)</span>
-                <span class="method-start">7545 ms</span>
+                <span class="method-name">preCondition(no, ${gridURL}, https://opensource-demo.orangehrmlive.com, prod.properties, public void script.Valid...)</span>
+                <span class="method-start">318 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testValidLogin</span>
-                <span class="method-start">11059 ms</span>
+                <span class="method-start">8877 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">postCondition([TestResult name=testValidLogin status=SKIP method=ValidLogin.testValidLogin()[pri:1, instance:scrip...)</span>
-                <span class="method-start">31714 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">preCondition(no, https://192.168.111.1, chrome, https://opensource-demo.orangehrmlive.com/, 10, 9, public void sc...)</span>
-                <span class="method-start">31969 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testValidLogin</span>
-                <span class="method-start">35511 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">postCondition([TestResult name=testValidLogin status=FAILURE method=ValidLogin.testValidLogin()[pri:1, instance:sc...)</span>
-                <span class="method-start">56918 ms</span>
+                <span class="method-name">postCondition([TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin()[pri:1, instance:sc...)</span>
+                <span class="method-start">10603 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">script.InvalidLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">58774 ms</span>
+                <span class="method-start">12237 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

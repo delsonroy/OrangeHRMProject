@@ -1,13 +1,13 @@
 <suite name="Suite">
 	<test name="Test">
-		<parameter name="grid" value="yes" />
-		<parameter name="gridURL" value="https://192.168.111.1" />
-		<parameter name="browser" value="chrome" />
-		<parameter name="appURL" value="https://opensource-demo.orangehrmlive.com/" />
-		<parameter name="ITO" value="10" />
-		<parameter name="ETO" value="9" />
+		
+		<parameter name="gridURL" value="${gridURL}" />
+		<parameter name="browser" value="${browser}" />
+		<parameter name="appURL" value="${appURL}" />
+		<parameter name="htmlpath" value="${htmlpath}" />
+		<parameter name="pptfile" value="${pptfile}" />
 		<packages>
 			<package name="script" />
 		</packages>
-	</test>
+	</test>	
 </suite> 

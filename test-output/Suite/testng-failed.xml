@@ -14,8 +14,8 @@
           <include name="postCondition"/>
           <include name="generateReport"/>
           <include name="intReport"/>
-          <include name="testValidLogin"/>
           <include name="preCondition"/>
+          <include name="testValidLogin"/>
         </methods>
       </class> <!-- script.ValidLogin -->
     </classes>

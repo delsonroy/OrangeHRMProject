@@ -42,22 +42,33 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 @Listeners(TestListener.class)
 public class BaseTest {
 	
-	//.............Global variables...................
+//	//.............Global variables...................
+	public static final String DEFAULT_URL="https://opensource-demo.orangehrmlive.com";
+	public static final String DEFAULT_GRID="no";
+	public static final String DEFAULT_PPT_FILE="qa.properties";
+	public static String XL_PATH;
+	public static final String DEFAULT_HTMLPATH="report/Spark.html";
 	
+
+	
+	public static ExtentReports reports; //Making it static sice we need only once
 	public ExtentTest extentTest;
+	
+	public WebDriver orginal_driver;
 	public  WebDriver driver;
 	public WebDriverWait wait;
-	public WebDriver orginal_driver;
-	public static ExtentReports reports; //Making it static sice we need only once
+	
+
 	
 	//.............B4 and After Suite for ExtentReport....................
 	
+	@Parameters({"htmlpath"})
 	@BeforeSuite //Execute only once
-	public void intReport()
+	public void intReport(@Optional(DEFAULT_HTMLPATH) String htmlPath)
 	{
 		 reports = new ExtentReports();
 		
-		ExtentSparkReporter spark = new ExtentSparkReporter("target/Spark.html");
+		ExtentSparkReporter spark = new ExtentSparkReporter(htmlPath);
 		reports.attachReporter(spark);
 	}
 	
@@ -68,23 +79,37 @@ public class BaseTest {
 		
 	}
 	
-	@Parameters({"grid","gridURL","browser", "appURL", "ITO", "ETO"})
+	@Parameters({"grid","gridURL","appURL","pptfile"})
 	@BeforeMethod //BeforeMethod
 	
 	//.............Before method....................
 	public void preCondition(
-			 				 @Optional ("no")String grid,
+			 				 @Optional (DEFAULT_GRID)String grid,
 			 				 @Optional ("https://192.168.111.1")String gridURL,
-							 @Optional ("chrome")String browser,
-							 @Optional ("https://opensource-demo.orangehrmlive.com/")String appURL,
-							 @Optional ("10")String ITO, 
-							 @Optional ("9")String ETO,Method method ) throws Exception   //Method Ends here
+							 @Optional (DEFAULT_URL)String appURL,
+							 @Optional (DEFAULT_PPT_FILE)String pptfile,
+							 Method method ) throws Exception   //Method Ends here
 					
 	{
-		Reporter.log("This is Before method...", true);
-		String testName=  method.getName();
 		
-		extentTest = reports.createTest(testName); // Since we need to create this before EveryTest we are keeping B4 Test
+        String testName=  method.getName();
+		extentTest = reports.createTest(testName);
+		
+		String browser=Util.getProperty(pptfile, "browser");
+		extentTest.info("Browser is "+browser);
+		String sITO=Util.getProperty(pptfile, "ITO");
+		String sETO=Util.getProperty(pptfile, "ETO");
+		Long lITO=Long.parseLong(sITO);
+		extentTest.info("ITO is "+lITO);
+		Long lETO=Long.parseLong(sETO);
+		extentTest.info("ETO is "+lETO);
+		XL_PATH=Util.getProperty(pptfile, "XLPATH");
+		extentTest.info("Excel path is "+XL_PATH);
+		
+		
+		
+		
+		// Since we need to create this before EveryTest we are keeping B4 Test
 		//Repeating step, this happens b4 wvery test. 
 		
 		// createTest("ValidLogin") This is the name in the extenReport
@@ -129,10 +154,10 @@ public class BaseTest {
 		orginal_driver.get(appURL);
 		extentTest.info("Maximize the browser");
 		orginal_driver.manage().window().maximize();
-		extentTest.info("Setting the ITO 10 sec");
-		orginal_driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ITO)));
-		extentTest.info("Setting the ETO 5 sec");
-		wait=new WebDriverWait(orginal_driver, Duration.ofSeconds(Integer.valueOf(ETO)));		
+		extentTest.info("Setting the ITO: "+lITO);
+		orginal_driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(lITO));
+		extentTest.info("Setting the ETO: "+lETO);
+		wait=new WebDriverWait(orginal_driver, Duration.ofSeconds(lETO));
 		//.............Decorator....................
 	
 		EventFiringDecorator<WebDriver> decorator= new 	EventFiringDecorator<WebDriver>(new SeleniumListener(extentTest));

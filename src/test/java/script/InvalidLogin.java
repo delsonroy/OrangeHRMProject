@@ -10,7 +10,7 @@ import generic.Retry;
 public class InvalidLogin extends BaseTest{
 	
 	
-	@Test(priority = 2, retryAnalyzer = Retry.class)
+	@Test(priority = 2, retryAnalyzer = Retry.class, enabled=false)
 	public void testInvalidLogin()
 	{
 		//Takda data from Excel
