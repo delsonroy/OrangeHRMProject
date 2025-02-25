@@ -1,0 +1,49 @@
+This is the notes about HashMap:
+=================================
+In the Map we have to insert the data as key value pair and they are tightly coupled. There is no key without pair and so. 
+Duplicated keys are not allowed but values are allowed. 
+
+In map Entry means a pair of key and value, A map is a collection of entries
+There are 2 classes to implement Map interface, Hashmap and HashTable
+Hashmap-> Underlying datastructure is hashtable
+          Insertion is not preserved(which our classes that inherit hashing techniques doesnot preserver insertion order)
+          Null key is allowed only once 
+          Searching is very faster in Map
+          Let's see the methods present in the HashMap
+          
+ Map Methods:
+ 
+      1) put method help us to insert one key value pair
+      2)m.putAll-> Helps us to insert one full map to another Map
+      3)m.get(key)-> It will provide the value against the key
+      4)m.remove(key)-> Here we can remove the value along with the key  	
+      5)m.contains(key)-> It will return true or false if there is a key present
+      6)m.contains(value)->it will return true or false if the value is present
+      7)m.isEmpty() Checks wether the Map contains anything
+      8)m.size() -> Number of Entries
+      9)m.clear() -> Clear the Map
+       
+  ======================================================
+  Methods related to Entries, these method will work with key and value
+  
+ -> I want to retrieve all the keys from the map then we have to use
+      m.keySet() ->All the list of keys will be returned. Return type is set(Keys cannot contains duplicate)
+      m.values() ->returns all the values (return values will be collection type since it allows duplicates)  
+      m.entrySet() 101 Delson, 102 Denya (All the entries indivdually and the return type of this method is Map.Entry
+      
+  ==========================================================================
+  
+  Entry Interface -> Sub interface of Entry interface. 
+  
+     These methods are applicable to the EntrySet. First we need to retrieve on Entry and we can apply the following method to that
+    1)e.getKey() -> Provide the values against the key
+    2)e.getValue()    
+    3)e.setValue(Object ) if we need to change the value against key we can use this.   
+      
+      
+      
+      
+      
+      
+      
+      
